@@ -1,0 +1,207 @@
+/* Навигация для мобильных устройств */
+/* начало */
+
+nav.mobile {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.mobile-nav-text {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.logo-mobile {
+  width: 50px;
+  height: 50px;
+}
+
+.hamb-field {
+  justify-self: right;
+  height: 3.75rem;
+  margin-top: 20px;
+  margin-right: 30px;
+}
+
+.bar {
+  display: block;
+  width: 30px;
+  height: 2px;
+  margin: 6px auto;
+  transition: 0.2s;
+  line-height: 1;
+  background-color: darkblue;
+}
+
+.hamb-field.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamb-field.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamb-field.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+.popup {
+  display: block;
+  position: absolute;
+  height: calc(100% - 3.75rem);
+  width: 100%;
+  left: -100%;
+  background-color: #000000b0;
+  top: 3.75rem;
+  z-index: 5;
+  transition: 0.3s;
+}
+
+.popup.open {
+  left: 0;
+}
+
+.popup-menu {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+
+li.header-links {
+  width: 100%;
+  height: 70px;
+  margin: 0;
+  padding: 0;
+  border-top: darkblue solid 1px;
+  border-bottom: darkblue solid 1px;
+  background-color: #fff;
+}
+
+.popup-menu > li > a {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: black;
+  text-decoration: none;
+}
+
+.noscroll {
+  overflow: hidden;
+}
+
+.area-controls-mobile {
+  width: 100%;
+  height: 150px;
+  border-top: 1px solid lightgrey;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.control-icon-mobile {
+  width: 100px;
+  height: 100px;
+}
+/* конец */
+/* Навигация для мобильных устройств */
+
+header {
+  height: 100px;
+  width: 100%;
+}
+
+.part-top {
+  height: 2rem;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  background-color: #bbbbbb;
+}
+
+.area-menu {
+  padding-left: 50px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 10px;
+}
+
+.area-menu a {
+  text-decoration: none;
+  color: black;
+}
+
+.area-contacts {
+  padding-right: 50px;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+
+.area-contacts a {
+  text-decoration: none;
+  color: black;
+}
+
+.part-main {
+  width: 100%;
+  height: calc(100% - 2rem);
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  background-color: #adadad;
+}
+
+.part-main .area-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  font-size: 2rem;
+}
+
+.area-logo img {
+  width: 30px;
+  height: 30px;
+}
+
+.part-main .area-longimg {
+  height: 100%;
+  object-fit: scale-down;
+  display: flex;
+  justify-content: center;
+}
+
+.area-longimg img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.area-controls {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.control-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 7px;
+  transition: box-shadow 0.1s ease-out;
+}
+
+.control-icon:hover {
+  box-shadow: 1px 1px 10px 5px inset #007bff;
+}
+
+.control-icon:active {
+  box-shadow: 1px 1px 10px 5px inset #0056b3;
+}

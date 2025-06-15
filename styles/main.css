@@ -1,0 +1,123 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+  margin: 20px 0;
+}
+
+#product-list {
+  width: 100%;
+  display: grid;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  grid-template-columns: repeat(3, 1fr);
+  color: #333;
+  gap: 20px;
+}
+
+.product-card {
+  border: 2px solid rgb(175, 175, 175);
+  border-radius: 15px;
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.product-card:hover {
+  box-shadow: inset -1px -1px 10px 3px grey;
+  transform: translateY(-2px);
+}
+
+.product-image-container {
+  width: 40%;
+  max-width: 200px;
+  aspect-ratio: auto 1 / 1;
+  margin: 10px 10px;
+  float: left;
+}
+
+.product-image {
+  width: 100%;
+}
+
+h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #222;
+  margin: 15px 0;
+  text-align: center;
+}
+
+.product-price {
+  margin: 5px 0;
+  color: #00796b;
+  font-weight: bold;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.product-description {
+  margin: 5px 0;
+  font-size: 0.95rem;
+  color: #555;
+  text-align: center;
+}
+
+.product-tocart-button {
+  margin: 10px auto;
+  display: block;
+  width: 60%;
+  height: 2.2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #fff;
+  border-radius: 15px;
+  background-color: #007bff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.product-tocart-button:hover {
+  background-color: #0056b3;
+}
+
+.product-tocart-button:active {
+  background-color: #1c89ff;
+}
+
+@media (max-width: 1024px) {
+  #product-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  .product-card {
+    margin: 0 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  #product-list {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .product-card {
+    margin: 0 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .product-image-container {
+    width: 50%;
+    float: none;
+  }
+
+  .product-tocart-button {
+    margin: 15px auto;
+    transition: background-color 0.1s ease;
+  }
+}

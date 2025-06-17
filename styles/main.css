@@ -87,6 +87,41 @@ h3 {
   background-color: #1c89ff;
 }
 
+.category-select-label {
+  font-size: 1rem;
+  margin-right: 10px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 500;
+  color: #333;
+}
+
+#category-select {
+  margin: 15px 0;
+  padding: 8px 12px;
+  font-size: 1rem;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
+  color: #333;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+#category-select:hover {
+  border-color: #888;
+}
+
+#category-select:focus {
+  border-color: #555;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+  outline: none;
+}
+
+.category-select-option {
+  background-color: #fff;
+  color: #333;
+}
+
 @media (max-width: 1024px) {
   #product-list {
     grid-template-columns: repeat(2, 1fr);
